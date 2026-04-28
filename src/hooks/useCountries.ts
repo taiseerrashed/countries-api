@@ -11,7 +11,7 @@ export interface ICountry {
 };
 
 const fetchCountries = async (searchTerm: string, region:string): Promise<ICountry[]> => {
-    const response = await axios.get("https://restcountries.com/v3.1/all");
+    const response = await axios.get("https://restcountries.com/v3.1/all?fields=name,capital,region,population,area,flags");
     let countries = response.data;
     
     countries = countries.filter((country: ICountry) =>

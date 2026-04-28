@@ -13,7 +13,6 @@ const RegionFilter = ({region, setRegion}: IRegionProps) => {
             uniqueRegions.push(region)
         }
     })
-    console.log(uniqueRegions);
     
     if(isLoading) return <div>Loading...</div>
     if(isError) return <div>Error fetching region: {error.message}</div>
